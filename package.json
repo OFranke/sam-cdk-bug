@@ -1,0 +1,35 @@
+{
+  "name": "aws-cdk-get-started",
+  "version": "0.1.0",
+  "scripts": {
+    "init": "cdk bootstrap",
+    "dev": "yarn run sam:template; sam local start-api --env-vars environment.json",
+    "sam:template": "cdk synth --no-staging > template.yaml",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.31.0",
+    "@types/jest": "^24.0.22",
+    "@types/node": "10.17.5",
+    "aws-cdk": "1.31.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.1.0",
+    "tsc": "1.20150623.0",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "1.31.0",
+    "@aws-cdk/aws-iam": "1.31.0",
+    "@aws-cdk/aws-lambda": "1.31.0",
+    "@aws-cdk/aws-rds": "1.31.0",
+    "@aws-cdk/aws-s3": "1.31.0",
+    "@aws-cdk/aws-sam": "1.31.0",
+    "@aws-cdk/core": "1.31.0",
+    "aws-sdk": "2.651.0",
+    "source-map-support": "^0.5.16"
+  }
+}
